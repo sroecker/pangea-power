@@ -1,0 +1,64 @@
+{
+  "origins": [
+    2106,
+    2294,
+    2483,
+    2672,
+    2861,
+    3050,
+    3238,
+    3427,
+    3616,
+    3805,
+    3994,
+    4183
+  ],
+  "horizons": [
+    1,
+    9,
+    30
+  ],
+  "core_columns": [
+    "shortwave_radiation_backwards_sfc",
+    "total_cloud_cover_sfc",
+    "temperature_2_m_above_gnd",
+    "relative_humidity_2_m_above_gnd",
+    "zenith",
+    "azimuth"
+  ],
+  "expanded_columns": [
+    "shortwave_radiation_backwards_sfc",
+    "total_cloud_cover_sfc",
+    "temperature_2_m_above_gnd",
+    "relative_humidity_2_m_above_gnd",
+    "zenith",
+    "azimuth",
+    "angle_of_incidence",
+    "high_cloud_cover_high_cld_lay",
+    "medium_cloud_cover_mid_cld_lay",
+    "low_cloud_cover_low_cld_lay"
+  ],
+  "oracle": true,
+  "tree": {
+    "lags": 24,
+    "weather_lags": [
+      1,
+      2,
+      3,
+      9
+    ],
+    "training_stride": 3,
+    "max_iter": 100,
+    "max_leaf_nodes": 15,
+    "loss": "absolute_error"
+  },
+  "note": "Exploratory evaluation. Assumes row chronology and historical feature availability. No timestamps or weather issue times supplied.",
+  "data_sha256": "c5c00725a94956c78dec070219c53c16a12c8c5740afdf75e272a097124201aa",
+  "packages": {
+    "timestral": "1.0.0",
+    "torch": "2.14.1",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6"
+  }
+}
